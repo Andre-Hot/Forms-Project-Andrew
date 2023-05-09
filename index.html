@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css" />
+    <title>Post App</title>
+</head>
+
+<body>
+    <header>
+        <h1>Andrew's lovely Forms project</h1>
+        <button>Create New Post</button>
+    </header>
+
+
+
+    <main>
+
+        <section>
+            <h2>Posts</h2>
+            <section id="posts" class="grid-container"></section>
+        </section>
+
+        <section>
+            <h2>Users</h2>
+            <section id="users" class="grid-container"></section>
+        </section>
+    </main>
+
+    <dialog id="create-new-post" open>
+        <h2>Create new post</h2>
+        <form id="form-create-post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="">
+            <label for="body">Body:</label>
+            <input type="text" id="body" name="body" placeholder="Type the content of your new post">
+            <label for="image">Image:</label>
+            <input type="url" id="image" name="image" placeholder="pase an image">
+            <button id="btn-create-post">Create Post</button>
+        </form>
+
+
+        <!-- dialog - delete post -->
+        <dialog id="dialog-delete-post">
+            <h2>Do you want to delete post?</h2>
+            <p id="dialog-delete-post-title">Title of post</p>
+            <form method="dialog" id="form-delete-post">
+                <button type="button" class="btn-cancel">No</button>
+                <button>Yes</button>
+            </form>
+        </dialog>
+        <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+

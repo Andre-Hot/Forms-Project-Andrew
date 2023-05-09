@@ -1,0 +1,203 @@
+body {
+    margin: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px ;
+}   
+
+header {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size:auto;
+    top:0;
+    left: 0;
+    right:0;
+    
+}
+
+main {
+    background-color: aqua;
+    animation: fadeIn 1s;
+    padding: 160px 0 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 2;
+    }
+}
+
+grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1500px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.grid-item {
+    box-shadow: 0.5px 0.5px 5px blue(1, 0, 1, 0.25);
+    padding: 1.5em;
+    background-color: yellow;
+    transition: 0.5s;
+    animation: fadeIn 0.5s;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    box-shadow: 0 8px 16px 0 blue;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-item p {
+    margin: 0.3em 0;
+}
+
+.grid-item h3:first-letter,
+.grid-item p:first-letter {
+    text-transform: uppercase;
+}
+
+grid-container .btns {
+    padding: 1em 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.grid-container .btns button {
+    width: 100%;
+
+}form {
+    margin: 2em auto 0;
+    background-color: blue;
+    padding: 1em 1em 2em;
+    text-align: center;
+}
+button {
+    font-weight: 299;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid orange;
+    color: lightblue;
+    background-color: blueviolet;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    width: 100%;
+    max-width: 350px;
+}
+
+header button {
+    color: salmon;
+    background-color: blue;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+input {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    border: 2px solid blue;
+    display: block;
+    background: whitesmoke;
+}
+
+.btn-cancel {
+    background: lightcyan;
+    margin: 0 0 2em;
+}
+
+select {
+    background-color: blue;
+    border: none;
+    color: lightblue;
+    padding: 1em;
+    margin: 1em;
+    max-width: 340px;
+}
+
+
+dialog {
+    border-color: blue;
+    background-color: blue;
+    width: 65vw;
+    padding: 2em 1em;
+}
+
+dialog::backdrop {
+    background: rgb(172, 198, 201, 0.8);
+}
+
+.dialog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+dialog h4 {
+    margin-bottom: 0;
+}
+
+dialog ul {
+    margin: 0.5em 0 1em;
+    padding-inline-start: 1.5em;
+}
+
+dialog p {
+    text-align: center;
+}
+
+.tools-grid {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 2em;
+    justify-content: space-between;
+    justify-items: stretch;
+}
+
+@media (min-width: 600px) {
+    .tools-grid {
+        grid-template-columns: auto auto;
+        margin: 1em auto;
+    }
+}
+
+.tools-grid label {
+    max-width: 350px;
+}
